@@ -80,3 +80,12 @@ The viewer will automatically update the Today field with the current date and t
 - The viewer doesn't modify your original XSLT file
 - The preview updates once per second when changes are detected
 - For production use, you might want to implement a more robust solution 
+
+##Info From Ucha (Aversi)
+
+Configs\Json\patient-informed-consent\   კონფიგურაციის მისამართი შესაძლო
+ 
+custom\xslt\patient-informed-consent\PersonalInfo\  შაბლონის მისამართი
+
+- config.json need to move webmed config folder.
+- ConsentGeo.xslt need to move webmed xslt folder.
