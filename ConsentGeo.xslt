@@ -92,10 +92,10 @@
             height: auto;
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 1.2rem;
           "
         >
-          <div style="display: flex; align-items: center; gap: 12px; width: 100%">
+          <div style="display: flex; align-items: center; gap: 1.2rem; width: 100%">
   <label for="email" style="white-space: nowrap">ელ-ფოსტა:</label>
   <input>
     <xsl:attribute name="value">
@@ -104,7 +104,7 @@
   </input>
 </div>
 
-          <div style="display: flex; align-items: center; gap: 12px; width: 100%">
+          <div style="display: flex; align-items: center; gap: 1.2rem; width: 100%">
   <label for="email" style="white-space: nowrap">ტელ:</label>
   <input>
     <xsl:attribute name="value">
@@ -124,7 +124,7 @@
           padding: 1rem;
         "
       >
-        <ul style="display: flex; flex-direction: column; gap: 10px">
+        <ul style="display: flex; flex-direction: column; gap: 1rem; padding-left: 1rem">
           <li>
             წინამდებარე თანხმობაზე ხელმოწერით, პაციენტი/პაციენტის წარმომადგენელი
             ადასტურებს თანხმობას სს „კ. ერისთავის სახელობის ექსპერიმენტული და 
@@ -172,14 +172,14 @@
           </li>
         </ul>
       </section>
-      <div style="width: 100%; display: flex; margin-top: 22px; gap: 10px">
-        <div style="display: flex; align-items: center; gap: 12px">
+      <div style="width: 100%; display: flex; margin-top: 2.2rem; gap: 1rem">
+        <div style="display: flex; align-items: center; gap: 1.2rem">
           <label for="telephone" style="white-space: nowrap"
             >პაციენტის ხელმოწერა:</label
           >
           <div>_ _ _ _ _ _ _ _ _ _ _</div>
         </div>
-        <div style="display: flex; align-items: center; gap: 10px">
+        <div style="display: flex; align-items: center; gap: 1rem">
         <label for="telephone" style="white-space: nowrap">
   ხელმოწერის თარიღი: &#160;&#160;&#160;
   <xsl:value-of select="concat(substring(/Root/Today, 9, 2), '/', substring(/Root/Today, 6, 2), '/', substring(/Root/Today, 1, 4))"/>
@@ -202,10 +202,10 @@
         padding-right: 40px;
       "
     >
-      <label id="currentYearLabel" style="font-size: 12px; color: #7b7b7b">
+      <label id="currentYearLabel" style="font-size: .8rem; color:rgb(144, 144, 144)">
       </label>
       
-      <div style="display: flex; align-items: center; gap: 8px">
+      <div style="display: flex; align-items: center; gap: .8rem">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="12"
@@ -233,7 +233,7 @@
             </clipPath>
           </defs>
         </svg>
-        <label id="currentYearLabel" style="font-size: 12px; color: #7b7b7b">
+        <label id="currentYearLabel" style="font-size: .8rem; color:rgb(144, 144, 144)">
           (995 32) 2 02 25 25
         </label>
       </div>
