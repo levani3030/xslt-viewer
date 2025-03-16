@@ -81,7 +81,7 @@ The viewer will automatically update the Today field with the current date and t
 - The preview updates once per second when changes are detected
 - For production use, you might want to implement a more robust solution 
 
-##Info From Ucha (Aversi)
+## Info From Ucha (Aversi)
 
 Configs\Json\patient-informed-consent\   კონფიგურაციის მისამართი შესაძლო
  
