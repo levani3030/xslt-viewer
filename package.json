@@ -1,0 +1,16 @@
+{
+  "name": "xslt-viewer",
+  "version": "1.0.0",
+  "description": "XSLT Viewer for ConsentGeo.xslt",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test-xslt.js"
+  },
+  "dependencies": {
+    "@xmldom/xmldom": "^0.8.10",
+    "xslt-processor": "^0.11.7"
+  },
+  "author": "",
+  "license": "MIT"
+} 

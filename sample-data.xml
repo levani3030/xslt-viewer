@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root>
+  <Email>example@example.com</Email>
+  <PhoneNumber>+995 555 12 34 56</PhoneNumber>
+  <Today>2023-10-15T14:30:00</Today>
+</Root>
+
+<!-- 
+Note: The Today field is used to display the current date.
+In a real application, this would be dynamically generated.
+The format is: YYYY-MM-DDThh:mm:ss
+--> 

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XSLT Preview</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="output"></div>
+
+    <script>
+        // XSLT Transformation function
+        async function transformXSLT() {
+            try {
+                // Fetch the XML
+                const xmlResponse = await fetch('sample-data.xml?t=' + new Date().getTime());
+                const xmlText = await xmlResponse.text();
+                const xmlDoc = new DOMParser().parseFromString(xmlText, 'text/xml');
+
+                // Update the Today element with current date
+                const todayElement = xmlDoc.querySelector('Today');
+                if (todayElement) {
+                    const now = new Date();
+                    const formattedDate = now.toISOString().slice(0, 19);
+                    todayElement.textContent = formattedDate;
+                }
+
+                // Fetch the XSLT
+                const xsltResponse = await fetch('ConsentGeo.xslt?t=' + new Date().getTime());
+                const xsltText = await xsltResponse.text();
+                const xsltDoc = new DOMParser().parseFromString(xsltText, 'text/xml');
+
+                // Create transformer
+                const processor = new XSLTProcessor();
+                processor.importStylesheet(xsltDoc);
+
+                // Transform
+                const resultDoc = processor.transformToFragment(xmlDoc, document);
+                
+                // Display result
+                const outputElement = document.getElementById('output');
+                outputElement.innerHTML = '';
+                outputElement.appendChild(resultDoc);
+            } catch (error) {
+                console.error('XSLT transformation error:', error);
+                document.getElementById('output').innerHTML = '<div style="color: red; padding: 20px;">Error: ' + error.message + '</div>';
+            }
+        }
+
+        // Load the transformation
+        window.addEventListener('load', transformXSLT);
+    </script>
+</body>
+</html> 

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XSLT Viewer</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        #header {
+            background-color: #303134;
+            color: white;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #title {
+            font-size: 1.5rem;
+        }
+        #status {
+            background-color: #4CAF50;
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+        #content {
+            display: flex;
+            flex: 1;
+            height: calc(100vh - 60px);
+        }
+        #preview {
+            flex: 1;
+            border: none;
+            height: 100%;
+            width: 100%;
+        }
+        .error {
+            background-color: #f44336;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div id="title">XSLT Viewer - ConsentGeo.xslt</div>
+        <div id="status">Connected</div>
+    </div>
+    <div id="content">
+        <iframe id="preview" src="preview.html"></iframe>
+    </div>
+    <script src="xslt-viewer.js"></script>
+</body>
+</html> 
