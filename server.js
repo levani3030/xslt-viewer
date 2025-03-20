@@ -4,7 +4,7 @@ const path = require('path');
 const url = require('url');
 
 // Port for the local server
-const PORT = 3000;
+const PORT = 3030;
 
 // MIME types mapping
 const MIME_TYPES = {
