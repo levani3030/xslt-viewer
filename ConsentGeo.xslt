@@ -125,20 +125,18 @@
                 </li>
             </ul>
           </section>
-          <div style="width: 100%; display: flex; margin-top: 2.2rem; gap: 1rem">
-            <div style="display: flex; align-items: center; gap: 1.2rem">
-              <label for="telephone" style="white-space: nowrap"
-            >პაციენტის ხელმოწერა:</label
-          >
-              <div>_ _ _ _ _ _ _ _ _ _ _</div>
+          <section class="patient-section">
+            <div class="patient-signature">
+              <div class="patient-signature-wrapper">
+                <label for="telephone" style="white-space: nowrap">პაციენტის ხელმოწერა:</label>
+                <div class="patient-signature-form">_ _ _ _ _ _ _ _ _ _ _</div>
+              </div>
+              <div class="signature-date">
+                <label for="telephone" style="white-space: nowrap">ხელმოწერის თარიღი:
+                  <xsl:value-of select="concat(substring(/Root/Today, 9, 2), '/', substring(/Root/  Today, 6, 2), '/', substring(/Root/Today, 1, 4))"/>
+                </label>
+              </div>
             </div>
-            <div style="display: flex; align-items: center; gap: 1rem">
-              <label for="telephone" style="white-space: nowrap">
-  ხელმოწერის თარიღი: &#160;&#160;&#160;
-                <xsl:value-of select="concat(substring(/Root/Today, 9, 2), '/', substring(/Root/Today, 6, 2), '/', substring(/Root/Today, 1, 4))"/>
-              </label>
-            </div>
-          </div>
         </section>
         <footer
       style="

@@ -145,7 +145,37 @@ body {
     padding-left: 1rem;
 }
 
-section {
+.patient-section {
+    margin: 3rem;
+    gap: 1rem;
+}
+
+.patient-signature {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.patient-signature-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.patient-signature-form {
+    white-space: nowrap
+}
+
+.signature-date {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+/* section {
   width: 100%;
   height: auto;
   display: flex;
@@ -153,7 +183,7 @@ section {
   align-items: center;
   justify-content: center;
   padding: 1.1rem;
-}
+} */
 
 .sxva p {
   font-size: 1.2rem;
