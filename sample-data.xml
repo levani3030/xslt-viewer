@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Root>
-  <Email>example@example.com</Email>
-  <PhoneNumber>+995 555 12 34 56</PhoneNumber>
+  <FirstName>მამონტი</FirstName>
+  <LastName>ადამია</LastName>
+  <Email>madamia@aversi.ge</Email>
+  <PhoneNumber>555 12 34 56</PhoneNumber>
   <Today>2023-10-15T14:30:00</Today>
+  <ID>0100545567</ID>
+  <HistoryNumber>2536.25</HistoryNumber>
 </Root>
 
 <!-- 

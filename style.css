@@ -34,7 +34,7 @@ body {
     margin: 2rem;
 }
 
-.pacient-info {
+.patient-info {
     /* background-color: rgba(200, 200, 200, 0.2); */
     border-radius: 1rem;
     /* max-width: 60rem; */
@@ -47,7 +47,7 @@ body {
     width: 100%
 }
 
-.pacient-info-wrapper {
+.patient-info-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -56,7 +56,7 @@ body {
     /* width: 100% */
 }
 
-.pacient-info-box {
+.patient-info-box {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -65,19 +65,19 @@ body {
     gap: 1.2rem;
     padding: 1rem;
 }
-.pacient-info-box-wrapper {
+.patient-info-box-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.pacient-info-title {
+.patient-info-title {
     font-size: .8rem;
     margin-bottom: 0.5rem;
     color: #000;
 }
 
-.pacient-info-data {
+.patient-info-data {
     background-color: rgba(200, 200, 200, 0.2);
     /* border: solid 2px #0000006a; */
     border-radius: .7rem;
@@ -87,6 +87,46 @@ body {
     text-align: center;
     font-weight: 500;
     color: #000;
+}
+
+.patient-info-data .fullname {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.fullname span {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #000;
+    padding-left: 0.4rem;
+}
+
+.patient-status {
+    border: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 0;
+    width: auto;
+    cursor: pointer;
+    outline: none;
+}
+
+.patient-status-dropdown {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 5px;
+    vertical-align: middle;
+    border-top: 5px solid #000;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
 }
 
 .consent-section {
