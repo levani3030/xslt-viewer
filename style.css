@@ -7,6 +7,12 @@
   padding: 0;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 body {
   background-color: white;
   font-family: Arial, sans-serif;
@@ -103,6 +109,11 @@ body {
     padding-left: 0.4rem;
 }
 
+.patient-status-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
 .patient-status {
     border: none;
     background: transparent;
@@ -112,27 +123,34 @@ body {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    padding: 0;
-    width: auto;
+    width: 100%;
     cursor: pointer;
     outline: none;
+    padding: 0 1rem;
+    line-height: 1.5;
 }
 
-.patient-status-dropdown {
-    display: inline-block;
+.patient-status-dropdown-icon {
+    position: absolute;
+    top: 40%;
+    right: 0;
     width: 0;
     height: 0;
-    margin-left: 5px;
-    vertical-align: middle;
-    border-top: 5px solid #000;
-    border-right: 5px solid transparent;
     border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #000;
+    pointer-events: none;
+}
+
+.patient-status option {
+    padding: 0.5rem 1rem;
+    line-height: 1.5;
 }
 
 .consent-section {
-    margin-top: 28px;
+    margin-top: 2rem;
     width: 100%;
-    background-color:rgba(200, 200, 200, 0.2);
+    background-color: rgba(200, 200, 200, 0.2);
     height: auto;
     border-radius: 1rem;
     padding: 1rem;
@@ -154,68 +172,102 @@ body {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.patient-sigmature-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.patient-signature-noncapable {
+    max-width: 80rem;
+    display: flex;
     gap: 1rem;
 }
 
 .patient-signature-wrapper {
     display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+    gap: 1rem;
     align-items: center;
-    gap: 1.2rem;
+    text-align: center;
+    justify-content: flex-start;
+}
+
+.patient-signature-wrapper p, .patient-signature-date p  {
+    font-size: .8rem;
+}
+.patient-signature-id {
+    padding-left: 1rem;
 }
 
 .patient-signature-form {
-    white-space: nowrap
+    margin-top: 0;
+}
+.patient-signature-form2 {
+    margin-top: 4rem;
 }
 
-.signature-date {
+.patient-signature-wrapper input, .patient-signature-id input {
+    width: auto;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #000;
+    font-size: 1rem;
+}
+
+.patient-signature-date {
     display: flex;
+    flex-direction: row;
     align-items: center;
     gap: 1rem;
+    margin-left: auto; /* Align to the right */
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
+}
+
+.footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(200, 200, 200, 0.2);
+    width: 18rem;
+    height: auto;
+    border-radius: 1rem;
+    padding: .75rem;
+    gap: .5rem;
 }
 
 
-/* section {
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 1.1rem;
-} */
 
-.sxva p {
-  font-size: 1.2rem;
-  font-weight: 700;
-  line-height: 2rem;
-  color: #7b7b7b;
-  margin-bottom: 1.5rem;
-}
+@media print {
+    .patient-status-dropdown-icon {
+        display: none;
+    }
 
-.input-wrapper {
-  width: 100%;
-  border-radius: 1rem;
-  padding: 1rem;
-  background-color: rgba(200, 200, 200, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.input-wrapper input {
-  width: 100%;
-  height: 36px;
-  border-radius: 1rem;
-  border: none;
-  padding: 1rem;
-  flex-grow: 1;
-}
-.input-wrapper > div {
-  width: 100%;
-}
+    .patient-info-data,
+    .consent-section,
+    .footer-wrapper {
+        background-color: rgba(200, 200, 200, 0.2) !important;
+    }
 
-label {
-  font-size: 1.125rem;
-  font-weight: 500;
-  color: #303134;
+    /* Avoid page breaks inside these elements */
+    .patient-info, .consent-section, .footer-wrapper {
+        page-break-inside: avoid;
+    }
+
+    /* Ensure the body takes up the full height */
+    body {
+        height: auto;
+    }
 }
