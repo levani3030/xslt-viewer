@@ -287,9 +287,9 @@ body {
           <div class="clinic-logo">
             <img src="logo.svg" alt="Kirurgia"/>
           </div>
-                <pre>
+                <!-- <pre>
                   <xsl:copy-of select="."/>
-                </pre>
+                </pre> -->
         </header>
         <div class="main-wrapper">
           <div class="doctitle">

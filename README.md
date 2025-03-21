@@ -67,10 +67,22 @@ If you need to test with different data, edit the `sample-data.xml` file, which 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <Root>
-  <Email>example@example.com</Email>
-  <PhoneNumber>+995 555 12 34 56</PhoneNumber>
+  <Firstname>მამონტი</Firstname>
+  <Lastname>ადამია</Lastname>
+  <Email>madamia@aversi.ge</Email>
+  <PhoneNumber>555 12 34 56</PhoneNumber>
   <Today>2023-10-15T14:30:00</Today>
+  <PersonalId>0100545567</PersonalId>
+  <Address>კაიშაურის აღმართი 2536.25</Address>
 </Root>
+```
+
+## Show Root Tree
+
+```xml
+<pre>
+   <xsl:copy-of select="."/>
+</pre>
 ```
 
 The viewer will automatically update the Today field with the current date and time.
@@ -81,7 +93,7 @@ The viewer will automatically update the Today field with the current date and t
 - The preview updates once per second when changes are detected
 - For production use, you might want to implement a more robust solution 
 
-## Info From Ucha (Aversi)
+## Paths
 
 Configs\Json\patient-informed-consent\   კონფიგურაციის მისამართი შესაძლო
  
