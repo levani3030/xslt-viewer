@@ -1,4 +1,8 @@
-/* Global box-sizing for all elements */
+
+@import url("//cdn.web-fonts.ge/fonts/bpg-nateli/css/bpg-nateli.min.css");
+@import url("//cdn.web-fonts.ge/fonts/bpg-mrgvlovani-caps/css/bpg-mrgvlovani-caps.min.css");
+@import url("//cdn.web-fonts.ge/fonts/bpg-arial/css/bpg-arial.min.css");
+
 *,
 *::before,
 *::after {
@@ -8,7 +12,6 @@
 }
 
 html, body {
-    height: 100%;
     margin: 0;
     padding: 0;
 }
@@ -16,6 +19,39 @@ html, body {
 body {
   background-color: white;
   font-family: Arial, sans-serif;
+}
+
+/* Checkbox visibility styles */
+input[type="checkbox"] {
+  display: inline-block !important;
+  width: 20px !important;
+  height: 20px !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: relative !important;
+  z-index: 10 !important;
+  cursor: pointer !important;
+  margin-right: 10px !important;
+  vertical-align: middle !important;
+  -webkit-appearance: checkbox !important;
+  -moz-appearance: checkbox !important;
+  appearance: checkbox !important;
+}
+
+/* Print styles */
+@media print {
+  @page {
+    size: A4;
+    margin: 1cm;
+  }
+  
+  input[type="checkbox"] {
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    border: 1px solid black !important;
+    background-color: white !important;
+  }
 }
 
 .clinic-logo {
@@ -31,91 +67,90 @@ body {
 
 
 .doctitle {
+    font-family: "BPG Mrgvlovani Caps", sans-serif;
     display: flex;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     font-weight: 800;
     color: #000;
     text-align: center;
     justify-content: center;
-    margin: 2rem;
+    margin: 1rem 0;
 }
 
 .patient-info {
-    /* background-color: rgba(200, 200, 200, 0.2); */
     border-radius: 1rem;
     /* max-width: 60rem; */
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 1rem;
+    justify-content: flex-start;
+    padding: 0.7rem;
     /* min-height: 20rem; */
     width: 100%
 }
 
 .patient-info-wrapper {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.1rem;
-    align-items: stretch;
-    /* width: 100% */
+    flex-direction: row;
+    /* gap: 10rem; */
+    align-items: flex-start;
+    width: 100%;
+    justify-content: space-between;
+    align-content: space-between;
 }
 
 .patient-info-box {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 1.2rem;
+    background-color: rgba(200, 200, 200, 0.2);
+    width: 25rem;
+    border-radius: 1rem;
     padding: 1rem;
+    line-height: 1.5;
 }
 .patient-info-box-wrapper {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: space-between;
 }
-.patient-info-title {
+.patient-info-content {
     font-size: .8rem;
+    color: #151515;
+}
+
+.patient-info-box-wrapper span,
+.patient-signature-wrapper span
+ {
+    font-weight: 700;
+    font-size: .8rem;
+    margin-left: 0.5rem;
     margin-bottom: 0.5rem;
-    color: #000;
+    color: #151515;
 }
 
-.patient-info-data {
-    background-color: rgba(200, 200, 200, 0.2);
-    /* border: solid 2px #0000006a; */
-    border-radius: .7rem;
-    min-width: 10rem;
-    padding: 0.4rem;
-    font-size: 1.2rem;
-    text-align: center;
-    font-weight: 500;
-    color: #000;
-}
-
-.patient-info-data .fullname {
+.fullname {
+    padding-left: .5rem;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
-.fullname span {
-    font-size: 1.2rem;
-    font-weight: 500;
+.patient-info-data p {
     color: #000;
-    padding-left: 0.4rem;
+    width: 100%;
+    font-weight: 900;
+    margin-left: 0.1rem;
 }
 
 .patient-status-dropdown {
+    background-color: rgba(200, 200, 200, 0.2);
+    border: 1px solid #000;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
     position: relative;
     display: inline-block;
 }
 
 .patient-status {
     border: none;
+    text-align: center;
     background: transparent;
     font-family: inherit;
     font-size: inherit;
@@ -133,7 +168,7 @@ body {
 .patient-status-dropdown-icon {
     position: absolute;
     top: 40%;
-    right: 0;
+    right: .75rem;
     width: 0;
     height: 0;
     border-left: 5px solid transparent;
@@ -143,29 +178,32 @@ body {
 }
 
 .patient-status option {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1.5rem;
     line-height: 1.5;
 }
 
 .consent-section {
-    margin-top: 2rem;
+    font-family: "BPG Nateli", sans-serif;
     width: 100%;
     background-color: rgba(200, 200, 200, 0.2);
-    height: auto;
     border-radius: 1rem;
-    padding: 1rem;
+    padding: 0.7rem;
+    margin-top: 0.5rem;
 }
 
 .consent-section ul {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    text-align: justify;
+    gap: 0.5rem;
     padding-left: 1rem;
 }
 
 .patient-section {
-    margin: 3rem;
-    gap: 1rem;
+    background-color: rgba(200, 200, 200, 0.2);
+    margin: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
 }
 
 .patient-signature {
@@ -175,8 +213,17 @@ body {
     gap: 1rem;
 }
 
-.patient-sigmature-container {
+.patient-signature-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.patient-signature-container {
     display: flex;
+    margin: 1rem;
     flex-direction: column;
     justify-content: center;
     gap: 1rem;
@@ -190,12 +237,12 @@ body {
 
 .patient-signature-wrapper {
     display: flex;
-    flex-direction: row;
     white-space: nowrap;
     gap: 1rem;
-    align-items: center;
+    align-items: flex-start;
     text-align: center;
     justify-content: flex-start;
+    flex-direction: column;
 }
 
 .patient-signature-wrapper p, .patient-signature-date p  {
@@ -212,6 +259,45 @@ body {
     margin-top: 4rem;
 }
 
+/* The container */
+.patient-signature-checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+/* Hide the browser's default checkbox */
+.patient-signature-checkbox-container input[type="checkbox"] {
+  position: absolute !important;
+  opacity: 1 !important;
+  cursor: pointer !important;
+  height: 20px !important;
+  width: 20px !important;
+  left: 0 !important;
+  top: 0 !important;
+  z-index: 2 !important;
+  display: inline-block !important;
+  visibility: visible !important;
+}
+
+/* Create a custom checkbox */
+.form-control {
+  font-family: system-ui, sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.1;
+}
+
+.patient-sign-date {
+  padding: 2rem;
+  display: inline-block;
+  visibility: visible;
+  font-weight: bold;
+  color: #000000;
+}
+
 .patient-signature-wrapper input, .patient-signature-id input {
     width: auto;
     padding: 0.2rem 0.5rem;
@@ -225,14 +311,14 @@ body {
     flex-direction: row;
     align-items: center;
     gap: 1rem;
-    margin-left: auto; /* Align to the right */
+    margin-left: auto;
 }
 
 .footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10rem;
+    margin-top: 2rem;
 }
 
 .footer-wrapper {
@@ -251,23 +337,376 @@ body {
 
 
 @media print {
-    .patient-status-dropdown-icon {
-        display: none;
+    /* Define A4 page size and margins */
+    @page {
+        size: A4;
+        margin: 1cm;
     }
-
-    .patient-info-data,
-    .consent-section,
-    .footer-wrapper {
-        background-color: rgba(200, 200, 200, 0.2) !important;
+    
+    /* Apply same styles for body.printing class - for browser compatibility */
+    body.printing,
+    body.printing * {
+        font-size: 12pt !important;
+        line-height: 1.5 !important;
+        color: #000 !important;
+        background: #fff !important;
     }
-
-    /* Avoid page breaks inside these elements */
-    .patient-info, .consent-section, .footer-wrapper {
-        page-break-inside: avoid;
+    
+    body.printing .patient-signature.capable p,
+    body.printing .patient-signature.noncapable p,
+    body.printing .patient-signature.cantsign p {
+        font-size: 12pt !important;
     }
-
-    /* Ensure the body takes up the full height */
+    
+    body.printing .patient-signature[style*="display: flex"] {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    
+    body.printing .patient-signature-date {
+        font-size: 12pt !important;
+        font-weight: bold !important;
+    }
+    
+    /* Remove all background colors for printing */
+    * {
+        background-color: transparent !important;
+    }
+    
+    /* Core settings */
     body {
-        height: auto;
+        font-size: 12pt !important;
+        line-height: 1.5 !important;
+        width: 100%;
+    }
+    
+    /* Text sizes for standard elements */
+    p, span, div, input, select {
+        font-size: 12pt !important;
+    }
+    
+    /* Adjust global margins and padding */
+    body, div, p, ul, li {
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* Main container and layout */
+    .main-wrapper {
+        margin: 0.8rem !important;
+    }
+    
+    /* Consistent font sizes for all signature sections */
+    .patient-signature,
+    .patient-signature-wrapper,
+    .patient-signature-wrapper p,
+    .patient-signature-wrapper input,
+    .patient-signature-id,
+    .patient-signature-id input,
+    .patient-signature-form {
+        font-size: 12pt !important;
+    }
+    
+    /* Make all signature sections follow the same formatting */
+    .patient-signature.capable,
+    .patient-signature.noncapable,
+    .patient-signature.cantsign {
+        font-size: 12pt !important;
+    }
+    
+    /* Consistent formatting for all patient signature sections */
+    .patient-signature.noncapable .patient-signature-wrapper,
+    .patient-signature.cantsign .patient-signature-wrapper {
+        font-size: 12pt !important;
+        margin-top: 0 !important;
+    }
+    .consent-section {
+        font-size: 12pt !important;
+    }
+    
+    /* Set specific formatting for displayed signature section */
+    .patient-signature[style*="display: flex"] {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        margin-top: 0.5rem !important;
+    }
+    
+    /* Fix issues with signature containers in all sections */
+    .patient-signature-container {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+        gap: 0.5rem !important;
+    }
+    
+    /* Align signature lines consistently */
+    .patient-signature-form, 
+    .patient-signature-form2 {
+        margin-top: 0 !important;
+        margin-left: 0.5rem !important;
+    }
+    /* Fix vertical spacing within signature area */
+    .patient-signature .patient-signature {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+    
+    /* Style the signature date in the active section */
+    .patient-signature[style*="display: flex"] .patient-signature-date {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        margin-top: 0.8rem !important;
+        margin-left: auto !important;
+        color: #000000 !important;
+        page-break-inside: avoid !important;
+    }
+    
+    /* Make all inputs smaller in print */
+    .patient-signature input {
+        font-size: 12pt !important;
+        padding: 0.1rem 0.3rem !important;
+    }
+    
+    /* Lists and content */
+    .consent-section {
+        page-break-before: avoid !important;
+        page-break-after: avoid !important;
+        margin-top: 0.7rem !important;
+        padding: 0.7rem !important;
+        background-color: transparent !important;
+    }
+    
+    .consent-section ul {
+        padding-left: 1.5rem !important;
+        gap: 0.4rem;
+    }
+    
+    .consent-section li {
+        line-height: 1.5 !important;
+        margin-bottom: 0.5rem !important;
+        font-size: 12pt !important;
+    }
+    
+    /* Reset all background-related properties */
+    .patient-info-box,
+    .consent-section,
+    .footer-wrapper,
+    .patient-info-wrapper,
+    .patient-status-dropdown {
+        background-color: transparent !important;
+        box-shadow: none !important;
+    }
+    
+    /* Ensure uniform display for visible signature section */
+    .patient-signature[style*="display: flex"] {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    
+    /* Style the signature date in the active section */
+    .patient-signature[style*="display: flex"] .patient-signature-date {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        margin-top: 1rem !important;
+        margin-left: auto !important;
+        color: #000000 !important;
+        page-break-inside: avoid !important;
+    }
+    
+    .patient-signature[style*="display: flex"] .patient-signature-date p {
+        display: inline-block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        font-size: 11pt !important;
+        font-weight: bold !important;
+        color: #000000 !important;
+    }
+    
+    /* Hide dropdown arrow and border but keep the dropdown visible */
+    .patient-status-dropdown {
+        border: none !important;
+        border-radius: 0 !important;
+        display: inline-block !important;
+        padding: 0.5rem 0.8rem !important;
+    }
+    
+    .patient-status {
+        display: inline-block !important;
+        appearance: none !important;
+        -webkit-appearance: none !important;
+        -moz-appearance: none !important;
+        font-size: 11pt !important;
+    }
+    
+    .patient-status-dropdown-icon {
+        display: none !important;
+    }
+    
+    /* Adjust spacing and headers */
+    .doctitle {
+        margin: 0.8rem 0 !important;
+        font-size: 1rem !important;
+    }
+    
+    .patient-info {
+        margin-bottom: 0.7rem !important;
+        padding: 0.7rem 0 !important;
+    }
+    
+    /* Spacing for signature sections */
+    .patient-section {
+        margin: 1rem 0 !important;
+    }
+    
+    /* Ensure the signature dates are visible in print */
+    .patient-signature-date {
+        display: block !important;
+        margin-top: 1rem !important;
+        margin-left: auto !important;
+    }
+    
+    /* Footer styles */
+    .footer {
+        margin-top: 2rem !important;
+        font-size: 10pt !important;
+    }
+    
+    .footer-wrapper {
+        background-color: transparent !important;
+    }
+    
+    /* Page break controls */
+    .doctitle,
+    .patient-info,
+    .consent-section li,
+    .patient-section,
+    .patient-signature,
+    .footer-wrapper {
+        page-break-inside: auto;
+    }
+    
+    /* Ensure images print properly */
+    img {
+        max-width: 100%;
+    }
+    
+    /* Hide print button when printing */
+    .print-button {
+        display: none !important;
+    }
+    
+    /* Fix padding and spacing for all printer sections */
+    .patient-section {
+        margin: 1rem 0 !important;
+    }
+    
+    /* Handle specific signature sections */
+    .patient-signature.capable,
+    .patient-signature.noncapable,
+    .patient-signature.cantsign {
+        width: 100% !important;
+        page-break-inside: avoid !important;
+    }
+    
+    /* When hidden sections, really make them not take any space */
+    .patient-signature[style*="display: none"] {
+        display: none !important;
+        overflow: hidden !important;
+        visibility: hidden !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        opacity: 0 !important;
+    }
+    
+    /* Set spacing in flexbox elements */
+    .patient-signature-wrapper {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        align-items: center !important;
+        white-space: nowrap !important;
+        gap: 0.5rem !important;
+        margin-bottom: 1.3rem !important;
+    }
+    
+    /* Consistent heights for inputs */
+    .patient-signature-wrapper input {
+        min-height: 0 !important;
+        line-height: 1 !important;
+    }
+    
+    /* Fix signature date formatting */
+    .patient-signature[style*="display: flex"] .patient-signature-date p {
+        display: inline-block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        font-size: 11pt !important;
+        font-weight: bold !important;
+        color: #000000 !important;
+        line-height: 1.2 !important;
+        margin: 0 !important;
+    }
+    
+    /* Fix signature date formatting for each patient status type */
+    .patient-signature.capable .patient-signature-date,
+    .patient-signature.noncapable .patient-signature-date,
+    .patient-signature.cantsign .patient-signature-date {
+        font-size: 11pt !important;
+        font-weight: bold !important;
+        margin-left: auto !important;
+        color: #000000 !important;
+    }
+    
+    /* Special case for cantsign which has two dates */
+    .patient-signature.cantsign .patient-signature-date:nth-of-type(2) {
+        margin-top: 0.5rem !important;
+    }
+    
+    /* Make sure the date label is consistent */
+    .patient-signature-date p {
+        font-size: 11pt !important;
+        font-weight: bold !important;
+        color: #000000 !important;
+        line-height: 1.2 !important;
+    }
+    
+    /* Fix signature date formatting for special print-signature class */
+    .print-signature {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        margin-top: 0.8rem !important;
+        margin-left: auto !important;
+        color: #000000 !important;
+        font-size: 11pt !important;
+    }
+    
+    .print-signature p {
+        display: inline-block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        font-size: 11pt !important;
+        font-weight: bold !important;
+        color: #000000 !important;
+        line-height: 1.2 !important;
+    }
+    
+    /* Style the signature date in the active section */
+    .patient-signature[style*="display: flex"] .patient-signature-date {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        margin-top: 0.8rem !important;
+        margin-left: auto !important;
+        color: #000000 !important;
+        font-size: 11pt !important;
     }
 }
