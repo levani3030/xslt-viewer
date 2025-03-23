@@ -300,7 +300,6 @@ body {
     flex-direction: row;
     align-items: center;
     gap: 1rem;
-          <!-- margin-left: auto; /* Align to the right */ -->
 }
 
 .footer {
