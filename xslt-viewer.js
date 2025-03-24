@@ -7,7 +7,7 @@ const statusElement = document.getElementById('status');
 const previewFrame = document.getElementById('preview');
 
 // Watch interval (in milliseconds)
-const watchInterval = 1000;
+const watchInterval = 5000;
 
 // Last modified timestamp for detecting changes
 let lastModified = null;

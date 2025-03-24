@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="print-color-adjust" content="exact" />
-        <title>ინფორმირებული თამხმობა</title>
+        <title>Informed Consent for Medical Services</title>
         <style>
 @import url("//cdn.web-fonts.ge/fonts/bpg-nateli/css/bpg-nateli.min.css");
 @import url("//cdn.web-fonts.ge/fonts/bpg-mrgvlovani-caps/css/bpg-mrgvlovani-caps.min.css");
@@ -383,6 +383,9 @@ body {
         display: inline-block !important;
         padding: 0.3rem 0 !important;
     }
+    .patient-section {
+      margin-top: 10rem !important;
+    }
     .patient-signature-checkbox {
       font-size: 10pt !important;
     }
@@ -508,206 +511,203 @@ body {
                 </pre> -->
         </header>
         <div class="main-wrapper">
-          <div class="doctitle">
-            <p>პაციენტის წერილობითი, ინფორმირებული თანხმობა სამედიცინო მომსახურების გაწევაზე</p>
+  <div class="doctitle">
+    <p>Patient's Written Informed Consent for Medical Services</p>
+  </div>
+  <div class="patient-info">
+    <div class="patient-info-wrapper">
+      <div class="patient-info-box">
+        <div class="patient-info-box-wrapper">
+          <p class="patient-info-content">Full Name:</p>
+          <div class="patient-info-fullname">
+            <span>
+              <xsl:value-of select="/Root/Firstname"/>
+            </span>
+            <span>
+              <xsl:value-of select="/Root/Lastname"/>
+            </span>
           </div>
-          <div class="patient-info">
-            <div class="patient-info-wrapper">
-              <div class="patient-info-box">
-                <div class="patient-info-box-wrapper">
-                  <p class="patient-info-content">სახელი და გვარი:
-                </p>
-                  <div class="patient-info-fullname">
-                    <span>
-                      <xsl:value-of select="/Root/Firstname"/>
-                    </span>
-                    <span>
-                      <xsl:value-of select="/Root/Lastname"/>
-                    </span>
-                  </div>
-                </div>
-                <div class="patient-info-box-wrapper">
-                  <p class="patient-info-content">ელ-ფოსტა:
-                </p>
-                  <span>
-                    <xsl:value-of select="/Root/Email"/>
-                  </span>
-                </div>
-                <div class="patient-info-box-wrapper">
-                  <p class="patient-info-content">პირადი ნომერი:</p>
-                  <span>
-                    <xsl:value-of select="/Root/PersonalId"/>
-                  </span>
-                </div>
-                <div class="patient-info-box-wrapper">
-                  <p class="patient-info-content">ტელეფონი:</p>
-                  <span>
-                    <xsl:value-of select="/Root/PhoneNumber"/>
-                  </span>
-                </div>
-                <div class="patient-info-box-wrapper">
-                  <p class="patient-info-content">მისამართი:</p>
-                  <span>
-                    <xsl:value-of select="/Root/Address"/>
-                  </span>
-                </div>
-              </div>
-              <div class="document-signed">
-                <p>ხელმოწერილი</p>
-              </div>
-            </div>
-          </div>
-          <section class="consent-section">
-            <ul>
-              <li>
-                ექიმისაგან მივიღე ინფორმაცია დაავადების არსის, დიაგნოზის და სავარაუდო პროგნოზის შესახებ, ინფორმირებული ვარ
-                მკურნალობაზე უარის თქმის შემთხვევაში უარყოფითი ან/და ლეტალური შედეგების     რისკის არსებობის შესახებ და ვიძლევი
-                თანხმობას მკურნალობის ჩატარებაზე. გავეცანი გამოკვლევათა გეგმას, მკურნალობის     ტაქტიკას, სტრატეგიას, პირობებს და
-                ვეთანხმები მას.
-          </li>
-              <li>
-            ხელს ვაწერ რა დოკუმენტს, ვიძლევი თანხმობას პაციენტისათვის აუცილებელი ყველა სამკურნალო ღონისძიების ჩატარებაზე და მათ შესრულებას ვანდობ სს "კ. ერისთავის სახ. ექსპერიმენტული და კლინიკური ქირურგიის ეროვნული ცენტრი"-ს პერსონალს.
-          </li>
-              <li>
-            ვაცნობიერებ, რომ მკურნალობის მსვლელობისას შესაძლებელია წარმოიშვას არასტანდარტული სიტუაციები,
-            გაუთვალისწინებელი გარემოებები და გართულებები და რომ ამ შემთხვევაში მკურნალობის ტაქტიკა და ტექნოლოგიები შეიძლება
-            შეცვლილი იქნეს ექიმის მიერ. წარმოშობილი სიტუაციის შესაბამისად, ავადმყოფის ინტერესებიდან გამომდინარე შესაძლებელია, პაციენტს დამატებით ჩაუტარდეს გამოკვლევები, ინტენსიური თერაპია, ოპერაციები, ფილტვების ხელოვნური ვენტილაცია,
-            ჰემოდიალიზი, პერიტონიალური დიალიზი, ჰემოტრასფუზიები, ენდოსკოპიური მანიპულაციები და ა.შ
-          </li>
-              <li>
-            ვაცნობიერებ, რომ ოპერაცია სტანდარტულ შემთხვევებშიც კი დაკავშირებულია სისხლის დაკარგვის, ოპერაციის მიდამოს
-            ინფიცირების, გულ-სისხლძარღვთა სისტემის და სხვა ორგანო თა ფუნქციის დარღვევის, აგრეთვე სხვა გართულებებისა და
-            არასასურველი გამოსავლის რისკთან.
-          </li>
-              <li>
-            ვაცნობიერებ, რომ კრიტიკული და გადაუდებელი მედიცინის სტუქტურულ ერთეულებში მკურნა ლობის პერიოდში შესაძლოა
-            ადგილი ჰქონდეს ისეთ გართულებებს, როგორიცაა: სინუსიტი, ნოზოკომიური პნევმონია, სეფსისი, ცენტრალური და პერიფერიული
-            ვენების თრომბოზი, პნევმოთორაქსი, ჰიდროთორაქსი, პერიკარდიტი, ფილტვის არტერიის თრომბოემბოლია, თავის ტვინის
-            ინფარქტი, გულსისხლძარღვთა და სხვა შინაგან ორგანოთა ფუნქციის მოშლა და ეს გარ თულებები შეიძლება განვითარდეს
-            მკურნალობის ყველა წესის დაცვის და პროფილაქტიკური ღონისძიებების ჩატარების მიუხედავად.
-          </li>
-              <li>
-            გარანტიები მკურნალობის საბოლოო შედეგებთან დაკავშირებით სამედიცინო პერსონალისაგან არ მიგვიღია.
-          </li>
-              <li>
-            ინფორმირებული ვარ იმის შესახებ, რომ საჭიროა ექიმს ვაცნობო პაციენტის ჯანმრთელობის მდგომარეობასთან დაკავშირებული
-            ყველა გარემოება. ისეთი ფაქტების დამალვის შემთხვევაში (ალერგიული გამოვლინებები, წამლების ინდივიდუალური აუტანლობა,
-            ჩატარებული ჰემოტრანსფუზიები, აგრეთვე ნარკოტიკებისა და ალკოჰოლის ბოროტად გამოყენება, თანმხლები დაავადებები), რომლებმაც შესაძლოა გავლენა იქონიონ მკურნალობაზე და მის შედეგებზე, სამედიცინო პერსონალი იხსნის პასუხისმგებლობას.
-          </li>
-              <li>
-          ინფორმირებული ვარ იმის შესახებ, რომ ოპერაციამდე, ოპერაციის მსვლელობისას, მას შემდეგ ან მის გარეშე შესაძლებელია
-          სისხლის დაკარგვა ან მისი აუცილებელი გადასხმა. მიღებული მაქვს გარკვეული ინფორმაცია სისხლისა და მისი კომპონენტების
-          ტრანსფუზიის არსისა და შესაძლო გართულებების შესახებ და ვიძლევი თანხმობას ღონისძიებების ჩატარებაზე ჩემი დამატებითი
-          ინფორმირების გარეშე.
-          </li>
-              <li>
-            ინფორმირებული ვარ, რომ მკურნალობის პროცესში შესაძლოა საჭირო გახდეს ჩემი კვლევები ისეთი მოწყობილობებით, რომლებიც გამოასხივებენ მაიონიზირებელ რადიაციას (რენტგენით კვლევა, კომპიუტერული ტომოგრაფია და ა.შ.) და ვიძლევი თანხმობას.
-            </li>
-              <li>
-              ინფორმირებული ვარ, რომ ჩემი პერსონალური მონაცემები უნდა გადაეცეს ჩემს მზღვეველ კომპანიას/საყოველთაო ჯანდაცვის პროგრამას, რათა ანაზღაურდეს ჩატარებული მკურნალობა და ვაცხადებ თანხმობას.
-            </li>
-              <li>
-              ინფორმირებული ვარ კლინიკის მუშაობის რეჟიმის შესახებ, ვაცნობიერებ მას და თანახმა ვარ დავიცვა დადგენილი წესები.
-              </li>
-              <li>
-                მე უფლებას ვაძლევ ექიმს გამოაქვეყნოს ინფორმაცია ჩატარებული მანიპულაციის შესახებ სამეცნიერო მიზნით, ილუსტრაციების და აღწერილობითი ტექსტის თანხლებით, რომელიც გამორიცხავს პაციენტის იდენტიფიცირებას.
-                </li>
-              <li>
-              ინფორმირებული ვარ იმის შესახებ, რომ მკურნალობა პაციენტს ჩაუტარდება საყოველთაო ჯანდაცვის პროგრამის, სადაზღვევოპაკეტის, შიდა სტანდარტის მიხედვით. სჯ. პროგრამა და სადაზღვევო ვაუჩერი გულისხმობს პაციენტის მკურნალობის ხარჯებისანაზღაურებას კლინიკასთან შეთანხმებული ფასებით. ხოლო შიდა სტანდარტის შემთხვევაში კლინიკაში არსებული ტარიფებით შეფასებულ მკურნალობის ღირებულებას ანაზღაურებს თვით პაციენტი ან მისი სპონსორი.
-                </li>
-            </ul>
-          </section>
-          <section class="patient-section">
-            <div class="patient-sign-choose">
-              <div class="patient-status-dropdown">
-                <select name="patient-status" id="patient-status" class="patient-status">
-                  <option value="capable" selected="selected">პაციენტი თავად აწერს ხელს</option>
-                  <option value="noncapable">პაციენტის მაგივრად სხვა აწერს ხელს</option>
-                </select>
-                <span class="patient-status-dropdown-icon"></span>
-              </div>
-              <div class="patient-signature-info-icon">
-                <svg id="info-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="40px" height="40px">
-                  <path d="M 32 10 C 19.85 10 10 19.85 10 32 C 10 44.15 19.85 54 32 54 C 44.15 54 54 44.15 54 32 C 54 19.85 44.15 10 32 10 z M 32 14 C 41.941 14 50 22.059 50 32 C 50 41.941 41.941 50 32 50 C 22.059 50 14 41.941 14 32 C 14 22.059 22.059 14 32 14 z M 32 21 C 30.343 21 29 22.343 29 24 C 29 25.657 30.343 27 32 27 C 33.657 27 35 25.657 35 24 C 35 22.343 33.657 21 32 21 z M 32 30 C 30.895 30 30 30.896 30 32 L 30 42 C 30 43.104 30.895 44 32 44 C 33.105 44 34 43.104 34 42 L 34 32 C 34 30.896 33.105 30 32 30 z"/>
-                </svg>
-              </div>
-              <div class="patient-signature-info">
-                <p id="selfsign" class="selfsign">ივსება იმ შემთხვევაში, როდესაც პაციენტი თავად აწერს ხელს</p>
-                <p id="othersign" class="othersign">ივსება იმ შემთხვევაში, როდესაც პაციენტი თავად ვერ ან არ აწერს ხელს, ჯანმრთელობის მდგომარეობის თუ სხვა მიზეზის გამო</p>
-              </div>
-            </div>
-            <div class="patient-signature capable">
-              <!-- Content for capable -->
-              <div class="patient-signature-box">
-                <div class="patient-signature-container">
-                  <div class="patient-signature-wrapper">
-                    <p>სახელი და გვარი:
-                      <span>
-                        <xsl:value-of select="/Root/Firstname"/>
-                      </span>
-                      <span>
-                        <xsl:value-of select="/Root/Lastname"/>
-                      </span>
-                    </p>
-                    <p>დოკუმენტის ნომერი:
-                      <span>
-                        <xsl:value-of select="/Root/PersonalId"/>
-                      </span>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="patient-signature noncapable" style="display: none;">
-              <!-- Content for noncapable -->
-              <div class="patient-signature-box">
-                <div class="patient-signature-container">
-                  <div class="patient-signature-wrapper">
-                    <p>წარმომადგენლის სახელი და გვარი:
-                      <input type="text"/>
-                    </p>
-                    <p>პირადი დოკუმენტის ნომერი:
-                      <input type="text"/>
-                    </p>
-                    <p>ნათესაური კავშირი (ახლობელი):
-                      <input type="text"/>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="patient-signature-checkbox-container">
-              <div class="patient-signature-checkbox-wrapper">
-                <label class="patient-signature-checkbox">
-                  <input type="checkbox" name="checkbox" />მონიშვნით ვადასტურებ რომ გავეცანი და ვეთანხმები დოკუმენტის ყველა პუნქტს.
-                </label>
-                <label class="patient-signature-checkbox">
-                  <input type="checkbox" name="checkbox" />მონიშვნით ვადასტურებ პერსონალური მონაცემების სისწორეს.
-                </label>
-                <label class="patient-signature-checkbox">
-                  <input type="checkbox" name="checkbox" />მონიშვნით სურვილს გამოვთქვავ მივიღო შეტყობინება კვლევის შედეგების თუ სხვა 
-                  სახის ინფრომაციებზე.
-                </label>
-              </div>
-            </div>
-            <div class="patient-sign-container">
-              <div class="patient-signature-wrapper">
-                <p>ხელმოწერა:</p>
-                <div class="patient-signature-form">_________________________</div>
-              </div>
-              <div class="patient-sign-date">
-                <p>ხელმოწერის თარიღი:
-                  <xsl:value-of select="concat(substring(/Root/Today, 9, 2), '.', substring(/Root/Today, 6, 2), '.', substring(/Root/Today, 1, 4))"/>
-                </p>
-              </div>
-            </div>
-            <div class="patient-sign-status">
-              <p>დოკუმენტის სტატუსი:
-                <span>ხელმოწერილი</span>
-              </p>
-            </div>
-          </section>
         </div>
+        <div class="patient-info-box-wrapper">
+          <p class="patient-info-content">Email:</p>
+          <span>
+            <xsl:value-of select="/Root/Email"/>
+          </span>
+        </div>
+        <div class="patient-info-box-wrapper">
+          <p class="patient-info-content">Personal ID:</p>
+          <span>
+            <xsl:value-of select="/Root/PersonalId"/>
+          </span>
+        </div>
+        <div class="patient-info-box-wrapper">
+          <p class="patient-info-content">Phone:</p>
+          <span>
+            <xsl:value-of select="/Root/PhoneNumber"/>
+          </span>
+        </div>
+        <div class="patient-info-box-wrapper">
+          <p class="patient-info-content">Address:</p>
+          <span>
+            <xsl:value-of select="/Root/Address"/>
+          </span>
+        </div>
+      </div>
+      <div class="document-signed">
+        <p>Signed</p>
+      </div>
+    </div>
+  </div>
+  <section class="consent-section">
+    <ul>
+      <li>
+        I have received information from the physician regarding the nature of the illness, diagnosis, and probable prognosis. 
+        I am informed about the risks of negative and/or lethal outcomes if I refuse treatment. I consent to the proposed treatment 
+        after reviewing the examination plan, treatment tactics, strategy, and conditions, and I agree with them.
+      </li>
+      <li>
+        By signing this document, I consent to all necessary medical procedures for the patient and authorize the personnel of 
+        the National Center of Experimental and Clinical Surgery named after K. Eristavi to perform them.
+      </li>
+      <li>
+        I acknowledge that during treatment, non-standard situations, unforeseen circumstances, and complications may arise, 
+        and that in such cases, the treatment tactics and technologies may be modified by the physician. Depending on the 
+        situation and in the patient's best interest, additional examinations, intensive therapy, operations, artificial 
+        lung ventilation, hemodialysis, peritoneal dialysis, hemotransfusions, endoscopic manipulations, etc., may be required.
+      </li>
+      <li>
+        I understand that even standard operations carry risks including blood loss, infection of the operation site, 
+        disruption of cardiovascular and other organ functions, as well as other complications and undesirable outcomes.
+      </li>
+      <li>
+        I acknowledge that during treatment in critical and emergency medicine units, complications such as sinusitis, 
+        nosocomial pneumonia, sepsis, central and peripheral vein thrombosis, pneumothorax, hydrothorax, pericarditis, 
+        pulmonary artery thromboembolism, cerebral infarction, cardiovascular and other internal organ dysfunction may occur, 
+        despite all preventive measures and adherence to treatment protocols.
+      </li>
+      <li>
+        No guarantees regarding final treatment outcomes have been provided by the medical personnel.
+      </li>
+      <li>
+        I am informed that I must disclose all health-related circumstances to the physician. The medical personnel shall 
+        not be held responsible for consequences resulting from withholding information (allergic reactions, drug 
+        intolerances, previous hemotransfusions, narcotics/alcohol abuse, or concomitant diseases) that may affect treatment.
+      </li>
+      <li>
+        I am informed about potential blood loss before, during, or after surgery (or other procedures) and possible 
+        need for transfusion. I have received basic information about blood transfusion risks and consent to these 
+        procedures without requiring additional information.
+      </li>
+      <li>
+        I am informed that treatment may require examinations using ionizing radiation devices (X-rays, CT scans, etc.) 
+        and I consent to such procedures.
+      </li>
+      <li>
+        I am informed that my personal data will be shared with my insurance company/universal healthcare program for 
+        treatment cost coverage and I hereby grant this consent.
+      </li>
+      <li>
+        I am informed about the clinic's regulations, understand them, and agree to comply.
+      </li>
+      <li>
+        I authorize the physician to publish information about the performed procedures for scientific purposes with 
+        illustrations and descriptive text that prevents patient identification.
+      </li>
+      <li>
+        I am informed that treatment will be provided according to the universal healthcare program, insurance package, 
+        or internal standards. The state program and insurance voucher imply coverage of treatment costs at agreed prices, 
+        while internal standards require payment by the patient or sponsor according to clinic tariffs.
+      </li>
+    </ul>
+  </section>
+  <section class="patient-section">
+    <div class="patient-sign-choose">
+      <div class="patient-status-dropdown">
+        <select name="patient-status" id="patient-status" class="patient-status">
+          <option value="capable" selected="selected">Patient signs personally</option>
+          <option value="noncapable">Representative signs on patient's behalf</option>
+        </select>
+        <span class="patient-status-dropdown-icon"></span>
+      </div>
+      <div class="patient-signature-info-icon">
+        <svg id="info-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="40px" height="40px">
+          <path d="M 32 10 C 19.85 10 10 19.85 10 32 C 10 44.15 19.85 54 32 54 C 44.15 54 54 44.15 54 32 C 54 19.85 44.15 10 32 10 z M 32 14 C 41.941 14 50 22.059 50 32 C 50 41.941 41.941 50 32 50 C 22.059 50 14 41.941 14 32 C 14 22.059 22.059 14 32 14 z M 32 21 C 30.343 21 29 22.343 29 24 C 29 25.657 30.343 27 32 27 C 33.657 27 35 25.657 35 24 C 35 22.343 33.657 21 32 21 z M 32 30 C 30.895 30 30 30.896 30 32 L 30 42 C 30 43.104 30.895 44 32 44 C 33.105 44 34 43.104 34 42 L 34 32 C 34 30.896 33.105 30 32 30 z"/>
+        </svg>
+      </div>
+      <div class="patient-signature-info">
+        <p id="selfsign" class="selfsign">To be completed when patient signs personally</p>
+        <p id="othersign" class="othersign">To be completed when patient cannot sign due to health or other reasons</p>
+      </div>
+    </div>
+    <div class="patient-signature capable">
+      <div class="patient-signature-box">
+        <div class="patient-signature-container">
+          <div class="patient-signature-wrapper">
+            <p>Full Name:
+              <span>
+                <xsl:value-of select="/Root/Firstname"/>
+              </span>
+              <span>
+                <xsl:value-of select="/Root/Lastname"/>
+              </span>
+            </p>
+            <p>Document Number:
+              <span>
+                <xsl:value-of select="/Root/PersonalId"/>
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="patient-signature noncapable" style="display: none;">
+      <div class="patient-signature-box">
+        <div class="patient-signature-container">
+          <div class="patient-signature-wrapper">
+            <p>Representative's Full Name:
+              <input type="text"/>
+            </p>
+            <p>Personal ID Number:
+              <input type="text"/>
+            </p>
+            <p>Relationship (Relative):
+              <input type="text"/>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="patient-signature-checkbox-container">
+      <div class="patient-signature-checkbox-wrapper">
+        <label class="patient-signature-checkbox">
+          <input type="checkbox" name="checkbox" />By checking, I confirm I have read and agree to all document provisions.
+        </label>
+        <label class="patient-signature-checkbox">
+          <input type="checkbox" name="checkbox" />By checking, I confirm the accuracy of personal data.
+        </label>
+        <label class="patient-signature-checkbox">
+          <input type="checkbox" name="checkbox" />By checking, I wish to receive notifications about test results or other information.
+        </label>
+      </div>
+    </div>
+    <div class="patient-sign-container">
+      <div class="patient-signature-wrapper">
+        <p>Signature:</p>
+        <div class="patient-signature-form">_________________________</div>
+      </div>
+      <div class="patient-sign-date">
+        <p>Signature Date:
+          <xsl:value-of select="concat(substring(/Root/Today, 9, 2), '.', substring(/Root/Today, 6, 2), '.', substring(/Root/Today, 1, 4))"/>
+        </p>
+      </div>
+    </div>
+    <div class="patient-sign-status">
+      <p>Document Status:
+        <span>Signed</span>
+      </p>
+    </div>
+  </section>
+</div>
         <script>
       const currentYear = new Date().getFullYear();
       document.getElementById(
