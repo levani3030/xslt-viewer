@@ -1,5 +1,5 @@
 // File paths
-const xsltFilePath = 'ConsentGeo.xslt';
+const xsltFilePath = 'ContractGeo.xslt';
 const xmlFilePath = 'sample-data.xml';
 
 // DOM elements
