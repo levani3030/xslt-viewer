@@ -32,7 +32,7 @@
                 }
 
                 // Fetch the XSLT
-                const xsltResponse = await fetch('ContractGeo.xslt?t=' + new Date().getTime());
+                const xsltResponse = await fetch('ContractGeoOp.xslt?t=' + new Date().getTime());
                 const xsltText = await xsltResponse.text();
                 const xsltDoc = new DOMParser().parseFromString(xsltText, 'text/xml');
 

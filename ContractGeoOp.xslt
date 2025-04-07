@@ -88,12 +88,12 @@
                     }
 
                     .checkbox {
-                    width: 16px;
-                    height: 16px;
+                    width: 15px;
+                    height: 15px;
                     }
 
                     .main-section {
-                    margin-top: 1rem;
+                    margin-top: 1.2rem;
                     text-align: justify;
                     }
 
@@ -108,7 +108,7 @@
                     h4 {
                     font-weight: 600;
                     text-align: center;
-                    padding: 0.5rem;
+                    padding: 0.65rem;
                     }
 
                     .signature-box {
@@ -131,6 +131,13 @@
                     justify-content: flex-start;
                     flex-direction: column;
                     align-items: flex-start;
+                    }
+                    
+                    .signature-box-right-sign-container {
+                        width: 18rem;
+                        padding-bottom: 2.5rem;
+                        display: flex;
+                        align-items: flex-start;
                     }
 
                     .signature-box-left-sign {
@@ -158,7 +165,7 @@
                     }
 
                     .patient-sign-date {
-                        margin-top: 6rem;
+                        margin-top: 5rem;
                         text-align: right;
                         font-size: 0.9rem;
                     }
@@ -370,7 +377,7 @@
                                 </u>.
                                     </span>
                                 <span>
-                                    ხელმომწერი პირი: <u>პაციენტი</u>.
+                                    ხელმომწერი პირი: <u>პაციენტის მეურვე</u>.
                                 </span>
                         </p>
                         <p>
@@ -464,7 +471,7 @@
                                 2.2.3. დაიცვას "სამედიცინო დაწესებულების" შინაგანაწესი, მკურნალი
                                 ექიმის და სხვა სამედიცინო პერსონალისკანონიერი მოთხოვნები,
                                 ინდივიდუალური სანიტარული რეჟიმი, გაუფრთხილდეს "სამედიცინო
-                                დაწესებულების" ინვენტარს და პერსონალთან ურთიერთობის დროს დაიცვას
+                                დაწესებულების"ინვენტარს და პერსონალთან ურთიერთობის დროს დაიცვას
                                 ეთიკური ნორმები.
                             </p>
                             <p>
@@ -678,7 +685,7 @@
                                 5.2. წინამდებარე ხელშეკრულების 5.1. პუნქტით განსაზღვრული ვადის
                                 უშედეგოდ გასვლის შემთხვევაში დავასგანიხილავს და გადაწყვეტს
                                 სასამართლო საქართველოს კანონმდებლობის მიხედვით, "სამედიცინო
-                                დაწესებულების"ადგილსამყოფელის მიხედვით.
+                                დაწესებულების" ადგილსამყოფელის მიხედვით.
                             </p>
                             <h4>6. ხელშეკრულების მოქმედების ვადა და შეწყვეტის პირობები</h4>
                             <p>
@@ -787,7 +794,7 @@
                                     <p>სს "კ. ერისთავის სახ. ექსპერიმენტული და კლინიკური ქირურგიის
                                         ეროვნული ცენტრი"</p>
                                     <p>ს/კ: 202051689</p>
-                                    <p>მის: ქ.თბილისი, კ. ჩაჩავას ქ.N7</p>
+                                    <p>მის: ქ. თბილისი, კ. ჩაჩავას ქ.N7</p>
                                     <p>მომსახურე ბანკი: სს "საქართველოს ბანკი"</p>
                                     <p>ბანკის კოდი: BAGAGE22</p>
                                     <p>ა/ა (IBAN): #GE60BG0000000795294000</p>
@@ -798,21 +805,18 @@
                                         <img class="t-shamugia"
                                             src="data:image/png;base64, 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"
                                             alt="sign" />
+                                        </div>
                                     </div>
-                                </div>
                                 <div class="signature-box-right">
-                                    <p>"პაციენტი"<span>
-                                            <xsl:value-of select="/Root/Firstname" />
-                                        </span>
-                                        <span>
-                                            <xsl:value-of select="/Root/Lastname" />
-                                        </span>
-                                    </p>
-                                    <p>პირადი № <span>
-                                            <xsl:value-of select="/Root/PersonalId" />
-                                        </span>
-                                    </p>
-                                    <p>ტელეფონი: <span>
+                                    <div class="signature-box-right-sign-container">
+                                        <p>"პაციენტი" (სახელი და გვარი)
+                                        </p>
+                                    </div>
+                                    <div class="signature-box-right-sign-container">
+                                        <p>პირადი №
+                                        </p>
+                                    </div>
+                                    <!-- <p>ტელეფონი: <span>
                                             <xsl:value-of select="/Root/PhoneNumber" />
                                         </span>
                                     </p>
@@ -823,8 +827,11 @@
                                     <p class="address-wrapper">მის: <span>
                                             <xsl:value-of select="/Root/Address" />
                                         </span>
-                                    </p>
-                                    <p>ხელმოწერა:</p>
+                                    </p> -->
+                                    <div class="signature-box-right-sign-container">
+                                        <p>ხელმოწერა:
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -832,7 +839,7 @@
                             select="concat(substring(/Root/Today, 9, 2), '.', substring(/Root/Today, 6, 2), '.', substring(/Root/Today, 1, 4))" />
                     </p>
                     <p class="footer">
-                        დოკუმენტს ხელს აწერს პაციენტი
+                        დოკუმენტს ხელს აწერს პაციენტის წარმომადგენელი
                     </p>
                 </div>
 
